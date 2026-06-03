@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="A beautiful romantic birthday celebration for Devu - Made with love by Rahul.">
+    <title>Happy Birthday Devu | My Melody ❤️</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Glowing Blobs -->
+    <div class="bg-blobs">
+        <div class="blob blob-pink"></div>
+        <div class="blob blob-lavender"></div>
+        <div class="blob blob-gold"></div>
+    </div>
+
+    <!-- Interactive Particle Background -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Tap to Start Interactive Overlay (Bypasses Autoplay Restrictions) -->
+    <div id="interaction-overlay" class="interaction-overlay">
+        <div class="overlay-heart" id="overlay-heart-trigger">
+            <svg viewBox="0 0 32 32" width="80" height="80" fill="currentColor">
+                <path d="M16 28.5C16 28.5 3 20.5 3 11.5C3 6.5 7 3.5 11.5 3.5C14.5 3.5 16 5.5 16 5.5C16 5.5 17.5 3.5 20.5 3.5C25 3.5 29 6.5 29 11.5C29 20.5 16 28.5 16 28.5Z"/>
+            </svg>
+        </div>
+        <h1 class="overlay-text serif-title">Happy Birthday, Devu ❤️</h1>
+        <p class="overlay-sub">Tap the heart to enter your surprise</p>
+    </div>
+
+    <!-- Floating Glassmorphic Music Player -->
+    <div id="music-player" class="music-player">
+        <button id="music-toggle" class="music-btn" aria-label="Play Music">
+            <!-- Play Icon -->
+            <svg id="play-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M8 5v14l11-7z"/>
+            </svg>
+            <!-- Pause Icon (hidden by default) -->
+            <svg id="pause-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="display:none;">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+            </svg>
+        </button>
+        <span class="music-label">Aaradhike</span>
+        <div class="music-waves">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- Audio Element -->
+    <audio id="bg-music" src="audio.mp3" loop preload="auto"></audio>
+
+    <!-- Main Container -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="hero-image-wrapper fade-in-section">
+                <div class="hero-border"></div>
+                <div class="hero-frame">
+                    <img src="WhatsApp Image 2026-06-02 at 6.48.59 PM.jpeg" alt="Devu" class="hero-img">
+                </div>
+            </div>
+            
+            <div class="hero-title-container fade-in-section">
+                <h1 class="hero-title serif-title">Happy Birthday, Devu ❤️</h1>
+                <p class="hero-subtitle">My Love, today is all about celebrating you.</p>
+                <h2 class="hero-song-title romantic-script">Aaradhike ❤️</h2>
+                <p class="hero-quote">You are the melody that makes my life beautiful.</p>
+                
+                <button id="open-heart-btn" class="glowing-btn mt-4">Open My Heart ❤️</button>
+                <div id="hidden-hero-text" class="hidden-text">
+                    <p class="serif-title">"Among all the beautiful things in this world, my favorite is still your smile."</p>
+                </div>
+            </div>
+
+            <a href="#love-letter" class="scroll-down">
+                Scroll to Begin
+                <span>▼</span>
+            </a>
+        </section>
+
+        <!-- Love Letter Section -->
+        <section id="love-letter" class="fade-in-section">
+            <p class="section-tag">A Letter from My Heart</p>
+            <h2 class="section-title serif-title">For You, Devu</h2>
+            
+            <div class="envelope-wrapper" id="envelope-wrapper">
+                <div class="envelope">
+                    <div class="envelope-pocket"></div>
+                    <div class="envelope-pocket-right"></div>
+                    <div class="envelope-seal">
+                        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="letter-card">
+                    <div class="letter-text">
+                        <p>My Dearest Devu,</p>
+                        
+                        <p>Happy Birthday, my love. ❤️</p>
+                        
+                        <p>I don't know what I did to deserve someone as special as you, but every day I thank life for bringing you into my world.</p>
+                        
+                        <p>Your smile is my favorite sight, your happiness is my favorite wish, and your love is my favorite feeling.</p>
+                        
+                        <p>You make ordinary days feel beautiful and difficult days feel easier. Just knowing that you are there brings peace to my heart.</p>
+                        
+                        <p>On your birthday, I only want one thing for you—to be as happy as you make me.</p>
+
+                        <p>No matter how much time passes, my heart will always choose you.</p>
+                        
+                        <p>Happy Birthday, Devu.</p>
+
+                        <p>I love you more than words can ever explain. ❤️</p>
+                    </div>
+                    <div class="letter-sign romantic-script">Forever Yours,<br>Rahul ❤️</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Slideshow Section -->
+        <section id="gallery" class="fade-in-section">
+            <p class="section-tag">Visual Symphony</p>
+            <h2 class="section-title serif-title">Beautiful Memories of Devu ❤️</h2>
+
+            <div class="gallery-container">
+                <div class="slideshow-viewport" id="slideshow">
+                    <!-- Slides -->
+                    <div class="slide active">
+                        <img src="hr1.jpeg" alt="Devu Memory 1" class="slide-img">
+                    </div>
+                    <div class="slide">
+                        <img src="hr2.jpeg" alt="Devu Memory 2" class="slide-img">
+                    </div>
+                    <div class="slide">
+                        <img src="hr4.jpeg" alt="Devu Memory 3" class="slide-img">
+                    </div>
+                    <div class="slide">
+                        <img src="hr5.jpeg" alt="Devu Memory 4" class="slide-img">
+                    </div>
+                    <div class="slide">
+                        <img src="hr6.jpeg" alt="Devu Memory 5" class="slide-img">
+                    </div>
+                    <div class="slide">
+                        <img src="hr8.jpeg" alt="Devu Memory 6" class="slide-img">
+                    </div>
+
+                    <!-- Slide Controls -->
+                    <button class="slide-control prev" id="prev-slide" aria-label="Previous Slide">❮</button>
+                    <button class="slide-control next" id="next-slide" aria-label="Next Slide">❯</button>
+                </div>
+
+                <!-- Dots Navigation -->
+                <div class="slideshow-dots" id="slideshow-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Birthday Wishes Section -->
+        <section id="wishes" class="fade-in-section">
+            <p class="section-tag">My Wishes For You</p>
+            <h2 class="section-title serif-title">A Million Blessings</h2>
+            
+            <div class="wishes-container">
+                <div class="wish-item fade-in-section">"May your days be filled with happiness."</div>
+                <div class="wish-item fade-in-section" style="transition-delay: 0.3s">"May your dreams come true."</div>
+                <div class="wish-item fade-in-section" style="transition-delay: 0.6s">"May your smile never fade."</div>
+                <div class="wish-item fade-in-section" style="transition-delay: 0.9s">"May you always know how deeply you are loved."</div>
+            </div>
+        </section>
+
+        <!-- Secret Gift Section -->
+        <section id="secret-gift" class="fade-in-section">
+            <p class="section-tag">A Tiny Secret</p>
+            <h2 class="section-title serif-title">Just For You</h2>
+            
+            <div class="gift-container" id="gift-box-trigger">
+                <div class="gift-box">
+                    <div class="gift-lid"></div>
+                    <div class="gift-body"></div>
+                    <div class="gift-ribbon"></div>
+                    <div class="gift-bow"></div>
+                </div>
+            </div>
+            
+            <div id="gift-message" class="hidden-text mt-4">
+                <p class="serif-title">"If I could make one wish today, it would be to see you smiling forever. ❤️"</p>
+            </div>
+        </section>
+
+        <!-- Special Surprise Section -->
+        <section id="surprise" class="fade-in-section">
+            <p class="section-tag">The Grand Finale</p>
+            <h2 class="section-title serif-title">A Special Surprise</h2>
+            
+            <div class="surprise-card" id="surprise-trigger">
+                <div class="surprise-icon">✨</div>
+                <h3 class="serif-title" style="margin-bottom: 0.5rem;">For Devu's Eyes Only</h3>
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">Tap below to unlock your magical birthday surprise.</p>
+                <button class="surprise-btn glowing-btn">Unlock Surprise</button>
+            </div>
+        </section>
+
+        <!-- Countdown Fullscreen Overlay -->
+        <div id="countdown-overlay" class="countdown-overlay">
+            <div id="countdown-number" class="countdown-number">3</div>
+        </div>
+
+        <!-- Hidden Cake Surprise Content -->
+        <div id="surprise-revealed" class="surprise-revealed">
+            <div class="cake-container">
+                <div class="cake">
+                    <div class="plate"></div>
+                    <div class="layer layer-bottom"></div>
+                    <div class="layer layer-middle"></div>
+                    <div class="layer layer-top"></div>
+                    <div class="icing"></div>
+                    <div class="drip drip1"></div>
+                    <div class="drip drip2"></div>
+                    <div class="drip drip3"></div>
+                    <div class="candle">
+                        <div class="flame"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <h1 class="surprise-heading serif-title">Happy Birthday, Devu ❤️</h1>
+            <p class="surprise-message serif-title">
+                "May your smile shine brighter than these candles today and always."
+            </p>
+            <p class="surprise-message serif-title" style="margin-top: 1rem; font-size: 1.1rem; color: #fff;">
+                "Devu, you are my favorite hello, my hardest goodbye, and the most beautiful chapter of my life. ❤️"
+            </p>
+            
+            <button id="surprise-close" class="surprise-close-btn glowing-btn mt-4">Continue</button>
+        </div>
+
+        <!-- Outro Section -->
+        <section id="outro" class="fade-in-section">
+            <div class="outro-card">
+                <h2 class="outro-script romantic-script">Forever Yours,</h2>
+                <h3 class="outro-signature serif-title">Rahul ❤️</h3>
+                
+                <hr style="border: none; border-top: 1px solid rgba(224, 122, 155, 0.2); margin: 2rem 0;">
+                
+                <p class="outro-text">
+                    "To My Love, Devu ❤️<br>
+                    Thank you for making my life brighter, happier, and more beautiful every single day.<br><br>
+                    You are one of the best things that has ever happened to me.<br><br>
+                    Happy Birthday, My Love.<br>
+                    I Love You Forever. ❤️"
+                </p>
+                
+                <button id="final-scene-trigger" class="glowing-btn mt-4">One Last Thing...</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Final Ending Scene Overlay -->
+    <div id="final-scene" class="final-scene">
+        <div class="stars"></div>
+        <div class="floating-hearts-container" id="final-hearts"></div>
+        <div class="giant-glowing-heart">❤️</div>
+        
+        <div class="final-texts">
+            <h1 class="final-title serif-title">Made With Love For Devu ❤️</h1>
+            <h2 id="final-subtitle" class="final-subtitle serif-title hidden-text">"You are loved more than you know. ❤️"</h2>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
